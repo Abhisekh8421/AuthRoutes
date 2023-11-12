@@ -9,8 +9,8 @@ This project is a Node.js backend application built on the principles of Full Au
 ## Features
 
 - **User Authentication:** Secure user registration, login, and logout functionalities.
-- **Authorization:**Token-based authentication and authorization using jsonwebtoken.
-- **CRUD Operations:**Perform CRUD operations on both users and tasks.
+- Authorization:Token-based authentication and authorization using jsonwebtoken.
+- CRUD Operations:Perform CRUD operations on both users and tasks.
 - **Clean MVC Architecture:** Well-structured project organization following the Model-View-Controller (MVC) architecture.
 - **Middleware:** Utilizes middleware for cookie parsing, error handling, and authorization checks.
 - **Database Integration:** Connects to a database to store and retrieve user and task information.
