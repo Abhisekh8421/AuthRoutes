@@ -1,4 +1,4 @@
-## **Advanced AuthRoutes**
+## **AuthRoutes**
 
 ## Description
 
