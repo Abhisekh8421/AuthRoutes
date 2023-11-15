@@ -1,6 +1,4 @@
-# Project Name
-
-**<Advanced AuthRoutes>**
+## **AuthRoutes**
 
 ## Description
 
