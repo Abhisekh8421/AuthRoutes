@@ -19,7 +19,7 @@ export const getMytask = async (req, res) => {
 
   const task = await Task.find({ user: user }); // when the particular user id matches then those tasks will fetched
 
-  res.status(400).json({
+  res.status(200).json({
     success: true,
     task,
   });
@@ -31,7 +31,7 @@ export const deletetask = async (req, res) => {
   const task = await Task.findById(id);
 
   if (!task) {
-    return res.status(404).json({
+    return res.status(200).json({
       success: false,
       message: "invalid id!,check it once",
     });
@@ -39,7 +39,7 @@ export const deletetask = async (req, res) => {
 
   await task.deleteOne();
 
-  res.status(400).json({
+  res.status(200).json({
     success: true,
     message: "successfully task deleted",
   });
@@ -51,7 +51,7 @@ export const updatetask = async (req, res) => {
   const task = await Task.findById(id);
 
   if (!task) {
-    return res.status(404).json({
+    return res.status(200).json({
       success: false,
       message: "invalid id!,check it once",
     });
@@ -61,7 +61,7 @@ export const updatetask = async (req, res) => {
 
   await task.save();
 
-  res.status(400).json({
+  res.status(200).json({
     success: true,
     message: "successfully updated!",
   });

@@ -4,7 +4,7 @@ import { sendcookie } from "../utils/user_utils.js";
 
 export const getAllusers = async (req, res) => {
   const user = await User.find({});
-  res.status(400).json({
+  res.status(200).json({
     success: true,
     user,
   });
@@ -35,7 +35,7 @@ export const register = async (req, res) => {
   const { name, email, password } = req.body;
   let user = await User.findOne({ email });
   if (user) {
-    return res.status(404).json({
+    return res.status(200).json({
       success: false,
       message: "user already exists",
     });
