@@ -44,7 +44,7 @@ The project follows a clean MVC architecture with the following directory struct
 2. Install dependencies: `npm install`
 3. Set up environment variables: Create a `.env` file and configure necessary variables.
 4. Start the server: `npm run dev`
-5. deployed into the server run on :[Running](https://authroutes.onrender.com)
+5. deployed into the server run on :[CLICK HERE](https://authroutes.onrender.com)
 
 ## Usage
 
