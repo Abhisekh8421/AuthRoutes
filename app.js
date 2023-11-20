@@ -23,6 +23,7 @@ app.use(
 );
 
 connectdb();
+console.log(process.env.FRONTEND_URL);
 
 app.get("/", (req, res) => {
   res.send("<h1>working nicely</h1>");
