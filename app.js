@@ -16,15 +16,15 @@ app.use("/api/v1/tasks", taskRouter);
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-    preflightContinue: true,
+    // preflightContinue: true,
   })
 );
 
 connectdb();
-console.log(process.env.FRONTEND_URL);
+// console.log(process.env.FRONTEND_URL);
 
 app.get("/", (req, res) => {
   res.send("<h1>working nicely</h1>");
