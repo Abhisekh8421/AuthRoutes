@@ -62,9 +62,8 @@ export const getMyprofile = async (req, res) => {
 
 export const logout = (req, res) => {
   res
-    .status(200)
     .cookie("token", null, {
-      expires: new Date(Date.now()),
+      expires: new Date(0),
       sameSite: process.env.NODE_ENV === "development" ? "lax" : "none",
       secure: process.env.NODE_ENV === "development" ? false : true,
     })
