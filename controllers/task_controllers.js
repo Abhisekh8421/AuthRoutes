@@ -31,7 +31,7 @@ export const deletetask = async (req, res) => {
   const task = await Task.findById(id);
 
   if (!task) {
-    return res.status(200).json({
+    return res.status(404).json({
       success: false,
       message: "invalid id!,check it once",
     });
@@ -51,7 +51,7 @@ export const updatetask = async (req, res) => {
   const task = await Task.findById(id);
 
   if (!task) {
-    return res.status(200).json({
+    return res.status(404).json({
       success: false,
       message: "invalid id!,check it once",
     });
