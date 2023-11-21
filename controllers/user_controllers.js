@@ -14,7 +14,7 @@ export const login = async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email }).select("+password");
   if (!user) {
-    return res.json({
+    return res.status(404).json({
       success: false,
       message: "Register first",
     });
@@ -35,7 +35,7 @@ export const register = async (req, res) => {
   const { name, email, password } = req.body;
   let user = await User.findOne({ email });
   if (user) {
-    return res.status(200).json({
+    return res.status(404).json({
       success: false,
       message: "user already exists",
     });
