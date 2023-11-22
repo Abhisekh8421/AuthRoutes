@@ -12,7 +12,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1/users", userRouter);
-app.use("/api/v1/tasks", taskRouter);
+app.use("/api2/v1/tasks", taskRouter);
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
