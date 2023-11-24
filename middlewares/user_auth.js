@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 export const isAuthenticated = async (req, res, next) => {
   const { token } = req.cookies;
   if (!token) {
-    return res.json({
+    return res.status(400).json({
       success: false,
       message: "user is not found or Login first",
     });
